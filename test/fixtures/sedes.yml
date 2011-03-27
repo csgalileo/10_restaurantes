@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  direccion: MyString
+  municipio: MyString
+  zona: MyString
+  restaurante: 
+
+two:
+  direccion: MyString
+  municipio: MyString
+  zona: MyString
+  restaurante: 

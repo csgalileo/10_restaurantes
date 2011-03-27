@@ -1,0 +1,29 @@
+<h1>Listing sedes</h1>
+
+<table>
+  <tr>
+    <th>Direccion</th>
+    <th>Municipio</th>
+    <th>Zona</th>
+    <th>Restaurante</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sedes.each do |sede| %>
+  <tr>
+    <td><%= sede.direccion %></td>
+    <td><%= sede.municipio %></td>
+    <td><%= sede.zona %></td>
+    <td><%= sede.restaurante %></td>
+    <td><%= link_to 'Show', sede %></td>
+    <td><%= link_to 'Edit', edit_sede_path(sede) %></td>
+    <td><%= link_to 'Destroy', sede, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sede', new_sede_path %>

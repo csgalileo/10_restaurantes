@@ -1,0 +1,25 @@
+<%= form_for(@tipos_de_restaurante) do |f| %>
+  <% if @tipos_de_restaurante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipos_de_restaurante.errors.count, "error") %> prohibited this tipos_de_restaurante from being saved:</h2>
+
+      <ul>
+      <% @tipos_de_restaurante.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

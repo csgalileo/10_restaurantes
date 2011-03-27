@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @tipos_de_restaurante.tipo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @tipos_de_restaurante.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipos_de_restaurante_path(@tipos_de_restaurante) %> |
+<%= link_to 'Back', tipos_de_restaurantes_path %>

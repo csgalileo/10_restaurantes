@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @oferta.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @oferta.descripcion %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @oferta.imagen %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%= @oferta.precio %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @oferta.status %>
+</p>
+
+<p>
+  <b>Fecha inicio:</b>
+  <%= @oferta.fecha_inicio %>
+</p>
+
+<p>
+  <b>Fecha muerte:</b>
+  <%= @oferta.fecha_muerte %>
+</p>
+
+<p>
+  <b>Categoria comida:</b>
+  <%= @oferta.categoria_comida %>
+</p>
+
+
+<%= link_to 'Edit', edit_oferta_path(@oferta) %> |
+<%= link_to 'Back', ofertas_path %>

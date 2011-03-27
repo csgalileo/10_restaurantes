@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  imagen: MyString
+  precio: 9.99
+  status: 
+  fecha_inicio: 2011-03-26
+  fecha_muerte: 2011-03-26
+  categoria_comida: 
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  imagen: MyString
+  precio: 9.99
+  status: 
+  fecha_inicio: 2011-03-26
+  fecha_muerte: 2011-03-26
+  categoria_comida: 

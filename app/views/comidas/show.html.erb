@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @comida.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @comida.descripcion %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @comida.imagen %>
+</p>
+
+<p>
+  <b>Precio:</b>
+  <%= @comida.precio %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @comida.status %>
+</p>
+
+<p>
+  <b>Categoria comida:</b>
+  <%= @comida.categoria_comida %>
+</p>
+
+
+<%= link_to 'Edit', edit_comida_path(@comida) %> |
+<%= link_to 'Back', comidas_path %>

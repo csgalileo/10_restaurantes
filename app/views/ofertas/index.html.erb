@@ -1,0 +1,37 @@
+<h1>Listing ofertas</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Imagen</th>
+    <th>Precio</th>
+    <th>Status</th>
+    <th>Fecha inicio</th>
+    <th>Fecha muerte</th>
+    <th>Categoria comida</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ofertas.each do |oferta| %>
+  <tr>
+    <td><%= oferta.nombre %></td>
+    <td><%= oferta.descripcion %></td>
+    <td><%= oferta.imagen %></td>
+    <td><%= oferta.precio %></td>
+    <td><%= oferta.status %></td>
+    <td><%= oferta.fecha_inicio %></td>
+    <td><%= oferta.fecha_muerte %></td>
+    <td><%= oferta.categoria_comida %></td>
+    <td><%= link_to 'Show', oferta %></td>
+    <td><%= link_to 'Edit', edit_oferta_path(oferta) %></td>
+    <td><%= link_to 'Destroy', oferta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Oferta', new_oferta_path %>
