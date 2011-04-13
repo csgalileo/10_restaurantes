@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :categoria_comida %><br />
-    <%= f.text_field :categoria_comida %>
+    <%= f.collection_select(:categoria_comida_id, CategoriaComida.all, :id, :categoria) %>
   </div>
   <div class="actions">
     <%= f.submit %>
