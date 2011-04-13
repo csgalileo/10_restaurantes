@@ -1,0 +1,25 @@
+<h1>Listing tipo_restaurantes</h1>
+
+<table>
+  <tr>
+    <th>Restaurante</th>
+    <th>Tipos de restaurante</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipo_restaurantes.each do |tipo_restaurante| %>
+  <tr>
+    <td><%= tipo_restaurante.restaurante %></td>
+    <td><%= tipo_restaurante.tipos_de_restaurante %></td>
+    <td><%= link_to 'Show', tipo_restaurante %></td>
+    <td><%= link_to 'Edit', edit_tipo_restaurante_path(tipo_restaurante) %></td>
+    <td><%= link_to 'Destroy', tipo_restaurante, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo restaurante', new_tipo_restaurante_path %>
