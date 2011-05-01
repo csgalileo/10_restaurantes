@@ -1,17 +1,45 @@
-<h2>Sign in</h2>
+<div id="header2">
+	<div id="logo">
+		<h1><a href="#">QueHayDeComer.com</a></h1>		
+	</div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+</div>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
 
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<div id="page2">
+	<div id="sidebar">
+		<div id="search" class="boxed">
+			<h2 class="title">Bienvenido!!</h2>
+			<div class="content">
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>				
+	                		<div id="textoBlanco"><%= f.label :email %></div>
+        			  <%= f.text_field :email %>
+				    <br />
+				    <br />
+				    <div id="textoBlanco">
+					<%= f.label :password %>
+				    </div>
+				    <div>
+				<%= f.password_field :password %>
+				<br/>
+				 <% if devise_mapping.rememberable? -%>
+				    <div id="textoBlanco"><p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p></div>
+				 <% end -%>
+					<%= f.submit "Sign in" %>
+
+				<% end %>
+				<br/>
+
+				<%= render :partial => "devise/shared/links" %>
+			</div>
+		</div>		
+		<div id="footer">
+			<p id="legal">&copy;Universidad Galileo<br />
+			</p>
+		</div>
+	</div>
+</div>
+
+

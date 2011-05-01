@@ -1,4 +1,6 @@
 class SedesController < ApplicationController
+before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /sedes
   # GET /sedes.xml
   def index

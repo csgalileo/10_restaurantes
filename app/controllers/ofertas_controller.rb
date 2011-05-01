@@ -1,4 +1,6 @@
 class OfertasController < ApplicationController
+before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /ofertas
   # GET /ofertas.xml
   def index

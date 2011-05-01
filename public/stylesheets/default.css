@@ -1,0 +1,342 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 20px 0 0 0;
+	padding: 0;
+	background: #FFFFFF url(images/img01.jpg);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #AD1112;
+}
+
+h1 {
+	font-size: 197%;
+}
+
+h2 {
+	font-size: 167%;
+}
+
+h3 {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+p, ol, ul {
+	line-height: 180%;
+}
+
+p {
+}
+
+ol {
+}
+
+ul {
+}
+
+blockquote {
+	margin: 0;
+	padding-left: 20px;
+	font-style: italic;
+}
+
+blockquote * {
+	line-height: normal;
+}
+
+a {
+	color: #AD1112;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+img.right {
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+hr {
+	display: none;
+}
+
+/* Header */
+
+#header {
+	width: 700px;
+	height: 220px;
+	margin: 0 auto;
+	background: url(images/plate.jpg) no-repeat right top;
+}
+
+#header2 {
+	width: 300px;
+	height: 220px;
+	margin: 0 auto;
+	/*background: url(images/img02.jpg) no-repeat right top;*/
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	width: 220px;
+	height: 220px;
+	background: #AD1011 url(images/img03.jpg);
+}
+
+#logo h1, #logo h2 {
+	margin: 0;
+	text-transform: lowercase;
+	text-align: center;
+	font-weight: normal;
+}
+
+#logo h1 {
+	padding: 120px 0 0 0;
+	background: url(images/img04.jpg) no-repeat 50% 30px;
+	letter-spacing: -1px;
+	font-size: 22px;
+}
+
+#logo h2 {
+	font-size: 18px;
+	color:#FFFFFF;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+	width: 470px;
+	height: 40px;
+	padding: 180px 0 0 0;
+}
+
+#menu ul {
+	width: 466px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	background: #AD1011 url(images/img05.jpg) repeat-x;
+	border-left: 2px solid #FFFFFF;
+	border-right: 2px solid #FFFFFF;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 32px;
+	padding: 8px 20px 0 19px;
+	background: url(images/img06.gif) no-repeat;
+	text-transform: lowercase;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+/* Page */
+
+#page {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#page2 {
+	width: 300px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 430px;
+	padding: 20px;
+	background: #FFFFFF url(images/img07.gif) no-repeat left bottom;
+}
+
+#content2 {
+	float: right;
+	width: 430px;
+	padding: 20px;
+	background: #FFFFFF url(images/img07.gif) no-repeat left bottom;
+}
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 220px;
+	padding-top: 10px;
+}
+
+#textoBlanco {
+	color:#FFFFFF;
+}
+
+#sidebar a {
+	color: #3699E4;
+}
+
+#sidebar ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	font-size: 92%;
+}
+
+#sidebar ul li {
+	padding: 5px 14px;
+	background: url(images/img13.gif) no-repeat 0px 12px;
+	border-top: 1px solid #0B0B0B;
+}
+
+#sidebar ul li.first {
+	border: none;
+}
+
+#sidebar ul li h2 {
+	margin: 0;
+	font-size: 100%;
+}
+
+#sidebar ul li h3 {
+	margin: 0;
+	font-size: 92%;
+}
+
+#sidebar h3 {
+	margin: 0;
+	font-size: 92%;
+}
+
+#sidebar ul li p {
+	margin: 0;
+}
+
+#sidebar  p {
+	margin: 0;
+}
+.boxed {
+	margin-bottom: 10px;
+	background: #000000 url(images/img10.gif) no-repeat left bottom;
+}
+
+.boxed .title {
+	height: 30px;
+	margin: 0;
+	padding: 10px 0 0 10px;
+	background: #5EB2ED url(images/img08.jpg) no-repeat;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.boxed .content {
+	padding: 15px;
+	background: url(images/img09.gif) repeat-x;
+}
+
+.boxed .content2 {
+	padding: 15px;
+	background: url(images/img09.gif) repeat-x;
+}
+
+/* Search */
+
+#search {
+}
+
+#search form {
+	margin: 0;
+	padding: 0;
+}
+
+#search fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#search p {
+	margin: 0;
+	font-size: 85%;
+}
+
+#user_email {
+	float: right;
+	width: 174px;
+	padding: 2px 5px;
+	background: #EFEFEF url(images/img11.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#user_password {
+	float: right;
+	width: 174px;
+	padding: 2px 5px;
+	background: #EFEFEF url(images/img11.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+
+#user_submit {
+	float: right;
+	margin-top: 5px;
+	background: #AD1112 url(images/img12.gif) repeat-x;
+	border: none;
+	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+	height: 50px;
+}
+
+#footer p {
+	margin: 0;
+	line-height: normal;
+	font-size: 85%;
+	color: #000000;
+}
+
+#footer a {
+	color: #000000;
+}
