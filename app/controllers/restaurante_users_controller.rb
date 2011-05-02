@@ -1,4 +1,6 @@
 class RestauranteUsersController < ApplicationController
+before_filter :authenticate_user!, :except => [:show, :index]
+
   # GET /restaurante_users
   # GET /restaurante_users.xml
   def index

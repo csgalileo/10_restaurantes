@@ -12,11 +12,6 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <div class="field">
-    <%= f.label :restaurante %><br />
-    <%= f.collection_select(:restaurante_id, Restaurante.all, :id, :nombre) %>
-  </div>
-
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 
