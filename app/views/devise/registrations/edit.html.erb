@@ -15,6 +15,11 @@
   <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></p>
 
+  <div class="field">
+    <%= f.label :restaurante %><br />
+    <%= f.collection_select(:restaurante_id, Restaurante.all, :id, :nombre) %>
+  </div>
+
   <p><%= f.submit "Update" %></p>
 <% end %>
 

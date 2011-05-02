@@ -1,4 +1,6 @@
 Qhdc::Application.routes.draw do
+  resources :restaurante_users
+
   resources :tipo_restaurantes
 
   devise_for :users
