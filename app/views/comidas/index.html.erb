@@ -1,10 +1,9 @@
-<h1>Listing comidas</h1>
+
+<h1>Lista de Productos</h1>
 
 <table>
   <tr>
     <th>Nombre</th>
-    <th>Descripcion</th>
-    <th>Imagen</th>
     <th>Precio</th>
     <th>Status</th>
     <th>Categoria comida</th>
@@ -16,18 +15,18 @@
 <% @comidas.each do |comida| %>
   <tr>
     <td><%= comida.nombre %></td>
-    <td><%= comida.descripcion %></td>
-    <td><%= comida.imagen %></td>
     <td><%= comida.precio %></td>
     <td><%= comida.status %></td>
-    <td><%= comida.categoria_comida_id %></td>
-    <td><%= link_to 'Show', comida %></td>
-    <td><%= link_to 'Edit', edit_comida_path(comida) %></td>
-    <td><%= link_to 'Destroy', comida, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= CategoriaComida.find(comida.categoria_comida_id).categoria %></td>
+    <td><%= link_to 'Detalle', comida %></td>
+    <td><%= link_to 'Editar', edit_comida_path(comida) %></td>
+    <td><%= link_to 'Borrar', comida, :confirm => 'Esta seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Comida', new_comida_path %>
+
+<%= link_to 'Agrega otro Producto ', new_comida_path %>
+
+

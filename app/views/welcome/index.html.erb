@@ -1,0 +1,16 @@
+
+			<h1 class="title">Bienvenido!!, veamos Que hay de comer!!</h1>
+			<p><img src="images/plate.jpg" alt="" width="118" height="118" class="right" /></p>
+			<h2>HOLA MUND CRUEL</h2>
+			<p>ESTA ES LA PAGINA DE INCIO AL MOMENTO DE AUTENTICARSE!!</p>
+
+
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %></div>
+<% else %>
+
+<% end %>
+
+<%= link_to 'New Comida', new_comida_path %>
+
+

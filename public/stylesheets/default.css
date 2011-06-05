@@ -183,9 +183,10 @@ hr {
 /* Content */
 
 #content {
-	float: right;
-	width: 430px;
-	padding: 20px;
+
+	/*width: 430px;*/
+	width: 680px;
+	padding: 10px;
 	background: #FFFFFF url(images/img07.gif) no-repeat left bottom;
 }
 

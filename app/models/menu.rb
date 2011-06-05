@@ -1,5 +1,9 @@
 class Menu < ActiveRecord::Base
   belongs_to :restaurante
-  belongs_to :comida
-  belongs_to :oferta
+  has_many :comida
+  has_many :oferta
+
+  validates_numericality_of :restaurante_id, :comida_id, :oferta_id
+  validates_presence_of :restaurante_id
+
 end

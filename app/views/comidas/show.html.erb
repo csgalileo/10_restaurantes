@@ -27,9 +27,11 @@
 
 <p>
   <b>Categoria comida:</b>
-  <%= @comida.categoria_comida %>
+  <%= CategoriaComida.find(@comida.categoria_comida_id).categoria %>
 </p>
 
 
-<%= link_to 'Edit', edit_comida_path(@comida) %> |
+<%= link_to 'Edit', edit_comida_path(@comida) %> 
 <%= link_to 'Back', comidas_path %>
+
+

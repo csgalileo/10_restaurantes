@@ -1,5 +1,5 @@
 class CategoriaComidasController < ApplicationController
-before_filter :authenticate_user!, :except => [:show, :index]
+before_filter :authenticate_user!
 
   # GET /categoria_comidas
   # GET /categoria_comidas.xml

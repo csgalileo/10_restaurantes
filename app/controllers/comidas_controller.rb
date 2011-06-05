@@ -1,5 +1,5 @@
 class ComidasController < ApplicationController
-before_filter :authenticate_user!, :except => [:show, :index]
+before_filter :authenticate_user!
 
   # GET /comidas
   # GET /comidas.xml

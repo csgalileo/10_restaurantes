@@ -17,9 +17,45 @@
   <% end %>
 </div>
 
-<%= yield %>
-<%= notice %>
-<%= alert %>
+  <% if user_signed_in? %>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1><a href="#">QueHayDeComer.com</a></h1>
+        <h2>Bienvenido</h2>
+		
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="active"><%= link_to("Inicio", { :controller => :welcome, :action => :index }) %></li>			
+			<li><%= link_to 'Productos', comidas_path %></li>
+			<li><%= link_to 'Ofertas', ofertas_path %></li>
+			<li><%= link_to 'Sedes', sedes_path %></li>
+			<li><%= link_to 'Cuenta', edit_user_password_url(@resource)%></li>
+		</ul>
+	</div>
+</div>
+<div id="page">
+	<div id="content">
+		<div>
+	<%= yield %>
+	<%= notice %>
+	<%= alert %>
+		</div>		
+	</div>
+</div>
+
+
+</body>
+
+
+
+  <% else %>
+	<%= yield %>
+	<%= notice %>
+	<%= alert %>
+
+  <% end %>
 
 
 </body>

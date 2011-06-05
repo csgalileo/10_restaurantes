@@ -1,4 +1,6 @@
 Qhdc::Application.routes.draw do
+  get "welcome/index"
+
   resources :restaurante_users
 
   resources :tipo_restaurantes
@@ -18,6 +20,8 @@ Qhdc::Application.routes.draw do
   resources :categoria_comidas
 
   resources :tipos_de_restaurantes
+
+  devise_for :users, :path_names => { :sign_up => "register" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
