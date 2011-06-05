@@ -15,8 +15,8 @@
   <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></p>
 
-  <p><%= f.label :Rol %><br />
-	<%= f.select :user, :user_type options_for_select(['admin', 'usuario'])%>
+  <p><%= f.label :rol %><br />
+  <%= f.select :rol, options_for_select([["admin"], "usuario"])%></p>
   </p>
 
 

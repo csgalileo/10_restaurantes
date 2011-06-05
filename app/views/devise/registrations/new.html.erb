@@ -12,9 +12,9 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.label :Rol %><br />
-	<%= f.select :user, :user_type options_for_select(['admin', 'usuario'])%>
-	</p>
+  <p><%= f.label :rol %><br />
+  <%= f.select :rol, options_for_select([["admin"], "usuario"])%></p>
+
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 
