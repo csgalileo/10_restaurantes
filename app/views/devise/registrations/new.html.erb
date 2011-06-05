@@ -1,21 +1,51 @@
+  <% if user_signed_in? %>
 <h2>Sign up</h2>
+  <% else %>
+<div id="header2">
+	<div id="logo">
+		<h1><a href="#">QueHayDeComer.com</a></h1>		
+	</div>
+
+</div>
+
+<div id="page2">
+	<div id="sidebar">
+		<div id="search" class="boxed">
+			<h2 class="title">Registrar Nuevo Usuario</h2>
+			<div class="content">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+   <div id="textoBlanco">
   <p><%= f.label :email %><br />
+</div>
   <%= f.text_field :email %></p>
-
+   <div id="textoBlanco">
   <p><%= f.label :password %><br />
+</div>
   <%= f.password_field :password %></p>
-
+   <div id="textoBlanco">
   <p><%= f.label :password_confirmation %><br />
+</div>
   <%= f.password_field :password_confirmation %></p>
+   
 
-  <p><%= f.label :rol %><br />
-  <%= f.select :rol, options_for_select([["admin"], "usuario"])%></p>
-
+<div id="textoBlanco">
+  <p><%= f.label :Rol %><br />
+</div>
+	<%= f.select :rol, options_for_select([["admin"], "usuario"])%></p>
   <p><%= f.submit "Sign up" %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+			</div>
+		</div>		
+			   <div id="textoBlanco">
+			<p id="legal">&copy;Universidad Galileo<br />
+			</div>
+			</p>
+
+	</div>
+</div>
+  <% end %>

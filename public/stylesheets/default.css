@@ -315,7 +315,23 @@ hr {
 	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+#user_password_confirmation {
+	float: right;
+	width: 174px;
+	padding: 2px 5px;
+	background: #EFEFEF url(images/img11.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
 
+#user_rol {
+	float: right;
+	width: 174px;
+	padding: 2px 5px;
+	background: #EFEFEF url(images/img11.gif) repeat-x;
+	border: 1px solid #FFFFFF;
+	font: bold 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
 #user_submit {
 	float: right;
 	margin-top: 5px;
