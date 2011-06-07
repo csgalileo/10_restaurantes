@@ -26,12 +26,12 @@
 		
 	</div>
 	<div id="menu">
-		<ul>
-			<li class="active"><%= link_to("Inicio", { :controller => :welcome, :action => :index }) %></li>			
+		<ul>			
+			<li class="active"><%= link_to("Inicio", { :controller => "/welcome", :action => :index }) %></li>		
 			<li><%= link_to 'Productos', comidas_path %></li>
 			<li><%= link_to 'Ofertas', ofertas_path %></li>
-			<li><%= link_to 'Sedes', sedes_path %></li>
-			<li><%= link_to 'Cuenta', edit_user_password_url(@resource)%></li>
+			<li><%= link_to 'Sedes', sedes_path %></li>			
+			<li><%= link_to 'Cuenta', edit_user_registration_url(@resource)%></li>
 		</ul>
 	</div>
 </div>

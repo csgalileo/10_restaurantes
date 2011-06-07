@@ -14,11 +14,11 @@
 
   <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></p>
-
+<% if current_user.admin? %>
   <p><%= f.label :Rol %><br />	
 	<%= f.select :rol, options_for_select([["admin"], "usuario"])%></p>
   </p>
-
+<% end %>
 
   <p><%= f.submit "Update" %></p>
 <% end %>

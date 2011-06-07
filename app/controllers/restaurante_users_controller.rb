@@ -1,5 +1,8 @@
 class RestauranteUsersController < ApplicationController
-before_filter :authenticate_user!
+
+  before_filter :authenticate_user!
+
+
 
   # GET /restaurante_users
   # GET /restaurante_users.xml

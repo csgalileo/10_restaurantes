@@ -12,7 +12,8 @@
 
 <p>
   <b>Imagen:</b>
-  <%= @comida.imagen %>
+	
+  <%= image_tag(@comida.photo.url,:size => "150x150") %>
 </p>
 
 <p>

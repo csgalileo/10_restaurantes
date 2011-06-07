@@ -1,4 +1,6 @@
 Qhdc::Application.routes.draw do
+  devise_for :admins
+
   get "welcome/index"
 
   resources :restaurante_users

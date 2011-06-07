@@ -85,7 +85,7 @@ hr {
 /* Header */
 
 #header {
-	width: 700px;
+	width: 800px;
 	height: 220px;
 	margin: 0 auto;
 	background: url(images/plate.jpg) no-repeat right top;
@@ -135,13 +135,13 @@ hr {
 
 #menu {
 	float: right;
-	width: 470px;
+	width: 580px;
 	height: 40px;
 	padding: 180px 0 0 0;
 }
 
 #menu ul {
-	width: 466px;
+	width: 530px;
 	height: 40px;
 	margin: 0;
 	padding: 0;
@@ -171,7 +171,7 @@ hr {
 /* Page */
 
 #page {
-	width: 700px;
+	width: 800px;
 	margin: 0 auto;
 }
 
@@ -185,7 +185,7 @@ hr {
 #content {
 
 	/*width: 430px;*/
-	width: 680px;
+	width: 780px;
 	padding: 10px;
 	background: #FFFFFF url(images/img07.gif) no-repeat left bottom;
 }

@@ -13,9 +13,11 @@
   <tr>
     <td><%= restaurante_user.user %></td>
     <td><%= restaurante_user.restaurante %></td>
+<% if current_user.admin? %>
     <td><%= link_to 'Show', restaurante_user %></td>
     <td><%= link_to 'Edit', edit_restaurante_user_path(restaurante_user) %></td>
     <td><%= link_to 'Destroy', restaurante_user, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
   </tr>
 <% end %>
 </table>

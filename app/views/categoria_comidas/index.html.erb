@@ -13,9 +13,11 @@
   <tr>
     <td><%= categoria_comida.categoria %></td>
     <td><%= categoria_comida.descripcion %></td>
+<% if current_user.admin? %>
     <td><%= link_to 'Show', categoria_comida %></td>
     <td><%= link_to 'Edit', edit_categoria_comida_path(categoria_comida) %></td>
     <td><%= link_to 'Destroy', categoria_comida, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
   </tr>
 <% end %>
 </table>

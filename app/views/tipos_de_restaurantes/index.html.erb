@@ -13,9 +13,11 @@
   <tr>
     <td><%= tipos_de_restaurante.tipo %></td>
     <td><%= tipos_de_restaurante.descripcion %></td>
+<% if current_user.admin? %>
     <td><%= link_to 'Show', tipos_de_restaurante %></td>
     <td><%= link_to 'Edit', edit_tipos_de_restaurante_path(tipos_de_restaurante) %></td>
     <td><%= link_to 'Destroy', tipos_de_restaurante, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
