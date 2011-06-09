@@ -18,5 +18,7 @@ test:
 production:
   adapter: sqlite3
   database: db/production.sqlite3
+  username: root
+  password: P@ssw0rd
   pool: 5
   timeout: 5000
