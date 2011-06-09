@@ -1,6 +1,5 @@
 
 <h1>Lista de Productos</h1>
-
 <table>
   <tr>
     <th>Nombre</th>
@@ -20,7 +19,7 @@
     <td><%= CategoriaComida.find(comida.categoria_comida_id).categoria %></td>
     <td><%= link_to 'Detalle', comida %></td>
     <td><%= link_to 'Editar', edit_comida_path(comida) %></td>
-    <td><%= link_to 'Borrar', comida, :confirm => 'Esta seguro?', :method => :delete %></td>
+    <td><%= link_to 'Borrar', comida, :confirm => 'Esta seguro de elimar?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

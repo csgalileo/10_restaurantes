@@ -11,4 +11,9 @@ validates_attachment_presence :photo
 validates_attachment_size :photo, :less_than => 5.megabytes
 validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
+#  def after_save
+#    m = Menu.new :restaurante_id => @ru, :comida_id => self.id
+#    m.save
+#  end
+
 end

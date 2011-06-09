@@ -1,7 +1,11 @@
 Qhdc::Application.routes.draw do
+  get "mobile/index"
+
   devise_for :admins
 
   get "welcome/index"
+
+  resources :mobile
 
   resources :restaurante_users
 

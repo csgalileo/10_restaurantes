@@ -8,6 +8,7 @@ class RestauranteUsersController < ApplicationController
   # GET /restaurante_users.xml
   def index
     @restaurante_users = RestauranteUser.all
+#    @ru = RestauranteUsers.find_by_user_id(current_user.id).restaurante_id
 
     respond_to do |format|
       format.html # index.html.erb

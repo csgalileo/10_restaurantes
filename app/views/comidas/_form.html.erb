@@ -1,7 +1,8 @@
+
 <%= form_for(@comida) do |f| %>
   <% if @comida.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@comida.errors.count, "error") %> prohibited this comida from being saved:</h2>
+      <h2><%= pluralize(@comida.errors.count, "error") %> no se puede guardar la comida:</h2>
 
       <ul>
       <% @comida.errors.full_messages.each do |msg| %>
@@ -21,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :imagen %><br />
-    <%= f.text_field :imagen %>
+    <%= f.file_field :photo %>
   </div>
   <div class="field">
     <%= f.label :precio %><br />
@@ -33,7 +34,13 @@
   </div>
   <div class="field">
     <%= f.label :categoria_comida %><br />
-    <%= f.collection_select(:categoria_comida_id, CategoriaComida.all, :id, :categoria) %>
+    <%= 
+
+	f.collection_select(:categoria_comida_id, @CategoriaComida.all, :id, :categoria) 
+
+
+
+    %>
   </div>
   <div class="actions">
     <%= f.submit %>

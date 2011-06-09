@@ -17,9 +17,9 @@
 
 <p>
   <b>Restaurante:</b>
-  <%= @sede.restaurante %>
+  <%= @sede.restaurante.nombre %>
 </p>
 
 
-<%= link_to 'Edit', edit_sede_path(@sede) %> |
-<%= link_to 'Back', sedes_path %>
+<%= link_to 'Editar', edit_sede_path(@sede) %> |
+<%= link_to 'Regresar', sedes_path %>

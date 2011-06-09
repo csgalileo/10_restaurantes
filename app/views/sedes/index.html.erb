@@ -16,14 +16,14 @@
     <td><%= sede.direccion %></td>
     <td><%= sede.municipio %></td>
     <td><%= sede.zona %></td>
-    <td><%= sede.restaurante %></td>
-    <td><%= link_to 'Show', sede %></td>
-    <td><%= link_to 'Edit', edit_sede_path(sede) %></td>
-    <td><%= link_to 'Destroy', sede, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= sede.restaurante.nombre%></td>
+    <td><%= link_to 'Detalle', sede %></td>
+    <td><%= link_to 'Editar', edit_sede_path(sede) %></td>
+    <td><%= link_to 'Eliminar', sede, :confirm => 'Esta seguro de elimar esta sede?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Sede', new_sede_path %>
+<%= link_to 'Nueva Sede', new_sede_path %>
