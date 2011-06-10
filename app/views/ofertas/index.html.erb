@@ -24,7 +24,7 @@
     <td><%= oferta.status %></td>
     <td><%= oferta.fecha_inicio %></td>
     <td><%= oferta.fecha_muerte %></td>
-    <td><%= oferta.categoria_comida %></td>
+    <td><%= CategoriaComida.find(oferta.categoria_comida).categoria %></td>
     <td><%= link_to 'Show', oferta %></td>
     <td><%= link_to 'Edit', edit_oferta_path(oferta) %></td>
     <td><%= link_to 'Destroy', oferta, :confirm => 'Are you sure?', :method => :delete %></td>

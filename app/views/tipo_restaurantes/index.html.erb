@@ -11,8 +11,8 @@
 
 <% @tipo_restaurantes.each do |tipo_restaurante| %>
   <tr>
-    <td><%= tipo_restaurante.restaurante %></td>
-    <td><%= tipo_restaurante.tipos_de_restaurante %></td>
+    <td><%= Restaurante.find(tipo_restaurante.restaurante_id).nombre %></td>
+    <td><%= TiposDeRestaurante.find(tipo_restaurante.tipos_de_restaurante_id).tipo %></td>
     <td><%= link_to 'Show', tipo_restaurante %></td>
     <td><%= link_to 'Edit', edit_tipo_restaurante_path(tipo_restaurante) %></td>
     <td><%= link_to 'Destroy', tipo_restaurante, :confirm => 'Are you sure?', :method => :delete %></td>
