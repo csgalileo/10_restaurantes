@@ -51,6 +51,13 @@ before_filter :authenticate_user!, :except => [:show, :index]
 
     @comida = Comida.new(params[:comida])
 
+    c = @comida
+
+    @ru = RestauranteUser.find_by_user_id(current_user.id)
+    r = @ru
+
+    Menu.new_insert(r.restaurante_id, c.id)
+
     respond_to do |format|
       if @comida.save
         format.html { redirect_to(@comida, :notice => 'Comida fue creada exitosamente') }

@@ -11,8 +11,8 @@
 
 <% @restaurante_users.each do |restaurante_user| %>
   <tr>
-    <td><%= restaurante_user.user %></td>
-    <td><%= restaurante_user.restaurante %></td>
+    <td><%= User.find(restaurante_user.user).email %></td>
+    <td><%= Restaurante.find(restaurante_user.restaurante).nombre %></td>
 <% if current_user.admin? %>
     <td><%= link_to 'Show', restaurante_user %></td>
     <td><%= link_to 'Edit', edit_restaurante_user_path(restaurante_user) %></td>

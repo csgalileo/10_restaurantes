@@ -6,4 +6,9 @@ class Menu < ActiveRecord::Base
   validates_numericality_of :restaurante_id, :comida_id, :oferta_id
   validates_presence_of :restaurante_id
 
+  def Menu.new_insert(id_restaurante, id_comida)    
+    i = Menu.new :comida_id => id_comida, :restaurante_id => id_restaurante
+    i.save
+  end
+
 end

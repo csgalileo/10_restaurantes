@@ -13,7 +13,7 @@
 <!-- HOME PAGE -->
 <div data-role="page" id="home" data-theme="a">
  <div data-role="content"> 
-  <img src="/images/logo.jpg" height="55"/>
+  <center><img src="/images/logo.jpg" height="75"/></center>
   <a href="#rest" data-role="button" >Restaurantes</a>
   <a href="#tipocom" data-role="button">Tipo de Comida</a>
   <a href="#oferta" data-role="button">Ofertas</a>
@@ -26,29 +26,31 @@
 <!-- RESTAURANTES -->
 <div data-role="page" id="rest" data-theme="a">
   <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>
-<!---menu en todos lados con iconos con descripcion -->
+  <img src="/images/logo.jpg" height="55"/>
+<!---menu -->
 <div class="ui-grid-b">
   <div class="ui-block-a"><center>Restaurantes</center></div>
   <div class="ui-block-b"><center>Tipo Comidas</center></div>
   <div class="ui-block-c"><center>Ofertas</center></div>
-  <div class="ui-block-a"><a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="25"/></a></div>
-  <div class="ui-block-b"><a href="#tipocom" data-role="button"><img src="/images/icon_dining.gif"/ height="25"></a></div>
-  <div class="ui-block-c"><a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="25"/></a></div>
 </div>
-<!-- fin menu de todos lados -->
-
-  <ul data-role="listview" data-inset="true" data-split-icon="grid">
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
+  <ul data-role="listview" data-inset="true" data-split-icon="grid" data-theme="a" data-divider-theme="b">
+  <li data-role="list-divider">Restaurantes</li>
   <% @restaurantes.each do |restaurante| %>
     <li>
       <img src="<%= restaurante.logo %>" height="" /><center><a href="#inforest"><h4><%= restaurante.nombre %></h4></a></center>
-      <a href="#comida" ></a>
+      <a href="#com">#comida</a>
     </li>
   <% end %>
   </ul>
  </div>
 
-<!--Footer de todos lados -->
+<!-- Footer -->
 <div data-role="footer">
   <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
   <a href="#home" data-role="button">Inicio</a>
@@ -59,7 +61,19 @@
 <!-- TIPO DE COMIDA -->
 <div data-role="page" id="tipocom" data-theme="a">
  <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>
+  <img src="/images/logo.jpg" height="55"/>
+<!---menu -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><center>Restaurantes</center></div>
+  <div class="ui-block-b"><center>Tipo Comidas</center></div>
+  <div class="ui-block-c"><center>Ofertas</center></div>
+</div>
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
   <div data-role="fieldcontain">
     <label for="tipo">Tipo de Comida:</label>
     <select name="tipo" id="tipo">
@@ -68,7 +82,8 @@
     <% end %>
     </select>
   </div>
-  <ul data-role="listview" data-inset="true">
+  <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="b">
+  <li data-role="list-divider">Comidas</li>
   <% @comidas.each do |comida| %>
     <li>
       <a href=""><%= comida.categoria_comida_id %> - <%= comida.nombre %></a>
@@ -76,31 +91,67 @@
   <% end %>
   </ul>
  </div>
+<!-- Footer -->
+<div data-role="footer">
+  <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
+  <a href="#home" data-role="button">Inicio</a>
+</div>
+<!--fin de footer -->
+
 </div> 
 
 <!-- OFERTAS -->
 <div data-role="page" id="oferta" data-theme="a">
  <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>
-  <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+  <img src="/images/logo.jpg" height="55"/>
+<!---menu -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><center>Restaurantes</center></div>
+  <div class="ui-block-b"><center>Tipo Comidas</center></div>
+  <div class="ui-block-c"><center>Ofertas</center></div>
+</div>
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
+  <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="b">
   <li data-role="list-divider">Ofertas</li>
   <% @ofertas.each do |oferta| %>
     <li data-role="button">
       <a href="#"><%= oferta.nombre %></a>
-
     </li>
   <% end %>
   </ul>
-
  </div>
+<!-- Footer -->
+<div data-role="footer">
+  <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
+  <a href="#home" data-role="button">Inicio</a>
+</div>
+<!--fin de footer -->
+
 </div>
 
 <!-- INFORMACION DE RESTAURANTES -->
 <div data-role="page" id="inforest" data-theme="a">
  <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>
-  <p>aca va la info de un restaurante especificamente</p>
-  <ul data-role="listview" data-inset="true">
+  <img src="/images/logo.jpg" height="55"/>
+<!---menu -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><center>Restaurantes</center></div>
+  <div class="ui-block-b"><center>Tipo Comidas</center></div>
+  <div class="ui-block-c"><center>Ofertas</center></div>
+</div>
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
+  <ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="b">
+  <li data-role="list-divider">Informacion Restaurante</li>
   <% @restaurantes.each do |rest| %>
     <li>
       <%= rest.informacion %>
@@ -108,28 +159,63 @@
   <% end %>
   </ul>
  </div>
+<!-- Footer -->
+<div data-role="footer">
+  <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
+  <a href="#home" data-role="button">Inicio</a>
+</div>
+<!--fin de footer -->
 </div>
 
 <!-- Info -->
 <div data-role="page" id="info" data-theme="a">
  <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>  
+  <img src="/images/logo.jpg" height="55"/>  
+<!---menu -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><center>Restaurantes</center></div>
+  <div class="ui-block-b"><center>Tipo Comidas</center></div>
+  <div class="ui-block-c"><center>Ofertas</center></div>
+</div>
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
   <h4>Seminario Profesional I</h4>
   <h4>Version 1.0 </h4>
-  <h4>Creada por:</h4>
-  <p>
-    Javier Juarez - 12344321<br /> 
-    Sergio Arevalo - 12344321<br /> 
-    Alberto Ruiz - 12344321<br /> 
-  </p>
+  <div data-role="listview" data-inset="true" data-theme="a" data-divider-theme="b">
+  <li data-role="list-divider">Creada por:</li>
+    <li>Javier Juarez - 12344321</li> 
+    <li>Sergio Arevalo - 12344321</li> 
+    <li>Alberto Ruiz - 12344321</li> 
+  </li>
  </div>
+<!-- Footer -->
+<div data-role="footer">
+  <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
+  <a href="#home" data-role="button">Inicio</a>
+</div>
+<!--fin de footer -->
 </div>
 
 <!-- Menu de Comidas -->
-<div data-role="page" id="comida" data-theme="a">
+<div data-role="page" id="com" data-theme="a">
  <div data-role="content">
-  <img src="/images/logo.jpg" height="35"/>  
-  <h2> Comidas </h2>
+  <img src="/images/logo.jpg" height="55"/>  
+<!---menu -->
+<div class="ui-grid-b">
+  <div class="ui-block-a"><center>Restaurantes</center></div>
+  <div class="ui-block-b"><center>Tipo Comidas</center></div>
+  <div class="ui-block-c"><center>Ofertas</center></div>
+</div>
+<div data-role="controlgroup" data-type="horizontal">
+    <a href="#rest" data-role="button"><img src="/images/icon_rest.gif" height="40"/></a>
+    <a href="#tipocom" data-role="button"><img src="/images/icon_dining.jpg"/ height="40"></a>
+    <a href="#oferta" data-role="button"><img src="/images/icon_oferta.png" height="40"/></a>
+</div>
+<!-- fin menu -->
   <ul data-role="listview" data-inset="true">
   <% @comidas.each do |comida| %>
     <li>
@@ -138,6 +224,12 @@
   <% end %>
   </ul>
  </div>
+<!-- Footer -->
+<div data-role="footer">
+  <a href="#home" data-role="button" data-icon="arrow-l">Atras</a>
+  <a href="#home" data-role="button">Inicio</a>
+</div>
+<!--fin de footer -->
 </div>
 
 </body>
