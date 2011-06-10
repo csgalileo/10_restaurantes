@@ -4,12 +4,12 @@ before_filter :authenticate_user!, :except => [:show, :index]
   # GET /comidas
   # GET /comidas.xml
   def index
-    #@comidas = Comida.all
+    @comidas = Comida.all
 
-    @idrest = RestauranteUser.find_by_sql ["SELECT * FROM restaurante_users where user_id=?",current_user.id]
-    r = @idrest.first
+#    @idrest = RestauranteUser.find_by_sql ["SELECT * FROM restaurante_users where user_id=?",current_user.id]
+#    r = @idrest.first
 
-    @comidas = Comida.find_by_sql ["SELECT c.* FROM comidas c, menus m where m.comida_id=c.id and m.restaurante_id=?",r.restaurante_id]
+#    @comidas = Comida.find_by_sql ["SELECT c.* FROM comidas c, menus m where m.comida_id=c.id and m.restaurante_id=?",r.restaurante_id]
 	
     respond_to do |format|
       format.html # index.html.erb
@@ -51,12 +51,12 @@ before_filter :authenticate_user!, :except => [:show, :index]
 
     @comida = Comida.new(params[:comida])
 
-    c = @comida
+#    c = @comida
 
-    @ru = RestauranteUser.find_by_user_id(current_user.id)
-    r = @ru
+#    @ru = RestauranteUser.find_by_user_id(current_user.id)
+#    r = @ru
 
-    Menu.new_insert(r.restaurante_id, c.id)
+#    Menu.new_insert(r.restaurante_id, c.id)
 
     respond_to do |format|
       if @comida.save
