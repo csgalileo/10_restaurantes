@@ -20,4 +20,4 @@ production:
   database: db/production.sqlite3
   username: root
   password: P@ssw0rd
-  host: localhost
+
